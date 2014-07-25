@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+	<title>Business Model Canvas | Sanoma</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css"/>
+	<script>
+	GSS_CONFIG = {
+		worker: '/bower_components/gss/dist/worker.min.js',
+		fractionalPixels: false
+	};
+	</script>
+	<script src="/bower_components/gss/dist/gss.min.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<style type="text/gss">
+	[$col-size] == ::window[width] / 5;
+
+	[$spacing] == ::window[width] / 67;
+	[$spacing] >= 20;
+
+	[$bottom-bit] == ::window[height] / 4;
+
+	body, h1, p {
+		margin:0;
+		padding:0;
+		overflow:hidden;
+	}
+	body {
+		margin:0;
+		padding:0;
+		font-family: 'Open Sans', sans-serif;
+	}
+	div.area {
+		overflow:scroll;
+		margin:0;
+		padding:0;
+		display:inline-block;
+		background:#fbfaef;
+		border:2px solid rgba(0, 0, 0, 0.1);
+
+		h1 {
+			margin-left: == [$spacing];
+			margin-top: == [$spacing];
+			margin-right: == [$spacing];
+			font-size:0.9em;
+			font-weight:normal;
+		}
+		p {
+			font-size:0.7em;
+			margin-left: == [$spacing];
+			margin-bottom: == [$spacing];
+			margin-right: == [$spacing];
+			font-weight:300;
+		}
+	}
+	.w1-5th {
+		width: == [$col-size];
+	}
+	.w1-2nd {
+		width: == ::window[width] / 2;
+	}
+	.h1-3rdp {
+		height: == (::window[height] - [$bottom-bit]) / 2;
+	}
+	.h1-3rd {
+		height: == [$bottom-bit];
+	}
+	.h2-3rd {
+		height: == (::window[height] - [$bottom-bit]);
+	}
+	#key-partners {
+		left: == 0;
+	}
+	#key-activities, #key-resources {
+		left: == [$col-size] * 1;
+	}
+	#value-proposition {
+		left: == [$col-size] * 2;
+	}
+	#relationships, #channels {
+		left: == [$col-size] * 3;
+	}
+	#customer-segments {
+		left: == [$col-size] * 4;
+	}
+	#cost-structure {
+		left: == 0;
+	}
+	#revenue-streams {
+		right: == ::window[right];
+	}
+	#cost-structure, #revenue-streams {
+		bottom: == ::window[bottom];
+	}
+	#key-resources, #channels {
+		top: == ::[height];
+	}
+	div.sticky {
+		float:left;
+		cursor:default;
+		position:relative;
+		margin-left: == [$spacing] / 2;
+		margin-bottom: == [$spacing] / 2;
+		width: == [$col-size] - ([$spacing] * 1);
+		height: == 38;
+
+		form {
+			width: == ::parent[width];
+			height: == ::parent[height];
+		}
+		input {
+			border:none;
+			outline:none;
+			background:none;
+			color:#fff;
+			font-size:0.8em;
+			padding: 10px;
+			display:block;
+			width: == ::parent[width];
+			height: == ::parent[height];
+			line-height: == ::[height];
+		}
+	}
+	a.logo {
+		display:block;
+		background:url(/images/sanomalab-logo.png) no-repeat;
+		background-size:48px 48px;
+		width: == 48;
+		height: == 48;
+		right: == ::window[width] - ([$spacing] / 2);
+		bottom: == ::window[height] - ([$spacing] / 2);
+	}
+	div#color-box {
+		display:none;
+		background:#fff;
+		width: == 108;
+		height: == 108;
+		position:absolute;
+
+		div.color {
+			z-index:1;
+			position:relative;
+			float:left;
+			width: == ::parent[width] / 3;
+			height: == ::parent[height] / 3;
+		}
+		div.selected {
+			-webkit-box-shadow:0px 0px 2px 4px rgba(0, 0, 0, 0.5);
+			z-index:2;
+		}
+	}
+	</style>
+	<style type="text/css">
+	::-webkit-input-placeholder {
+		color:rgba(255, 255, 255, 0.25);
+	}
+	</style>
+</head>
+
+<body>
+	<div class="area w1-5th h2-3rd" id="key-partners"><h1>Key Partners</h1><p>Which Key Resources are we acquiring from partners? Which Key Activities do partners perform?</p></div>
+
+	<div class="area w1-5th h1-3rdp" id="key-activities"><h1>Key Activities</h1><p>What Key Activities do our Value Propositions require?</p></div>
+	<div class="area w1-5th h1-3rdp" id="key-resources"><h1>Key Resources</h1><p>What Key Resources do our Value Propositions require?</p></div>
+
+	<div class="area w1-5th h2-3rd" id="value-proposition"><h1>Value Propositions</h1><p>What value do we deliver to each Customer Segment?</p></div>
+
+	<div class="area w1-5th h1-3rdp" id="relationships"><h1>Customer Relationships</h1><p>What type of relationship does each of our Customer Segments expect us to establish and maintain with them?</p></div>
+	<div class="area w1-5th h1-3rdp" id="channels"><h1>Channels</h1><p>Through which Channels do our Customer Segments want to be reached?</p></div>
+
+	<div class="area w1-5th h2-3rd" id="customer-segments"><h1>Customer Segments</h1><p>For whom are we creating value?</p></div>
+
+	<div class="area w1-2nd h1-3rd" id="cost-structure"><h1>Cost Structure</h1><p>What are the most important costs inherent in our business model?</p></div>
+	<div class="area w1-2nd h1-3rd" id="revenue-streams"><h1>Revenue Streams</h1><p>For what value are our customers really willing to pay?</p></div>
+
+	<a class="logo" target="sanomalab" href="http://www.sanomalab.co/"></a>
+	<div id="color-box">
+		<div class="color selected" style="background:#FF0000"></div>
+		<div class="color" style="background:#2ecc71"></div>
+		<div class="color" style="background:#3498db"></div>
+
+		<div class="color" style="background:#9b59b6"></div>
+		<div class="color" style="background:#34495e"></div>
+		<div class="color" style="background:#f1c40f"></div>
+
+		<div class="color" style="background:#e67e22"></div>
+		<div class="color" style="background:#1abc9c"></div>
+		<div class="color" style="background:#95a5a6"></div>
+	</div>
+	<script type="text/javascript">
+	var selectedSticky = null;
+
+	function serialize() {
+		var _stickiesToMap = function(selector) {
+			return $(selector).map(function() {
+				return {
+					text: $(this).find('input').val(),
+					backgroundColor: $(this).css('backgroundColor')
+				};
+			}).get();
+		}
+
+		var map = {};
+		$('.area').each(function() {
+			var key = $(this).attr('id');
+			map[key] = _stickiesToMap('#' + key + ' .sticky');
+		});
+
+		var base64Encoded = btoa(JSON.stringify(map));
+		window.location.hash = '#' + base64Encoded;
+	}
+
+	function deserialize(base64Encoded) {
+		var _mapToStickies = function(stickies, selector) {
+			var area = $(selector);
+
+			(stickies || []).forEach(function(stickyMap) {
+				if(stickyMap.text) {
+					var sticky = createSticky(stickyMap.text, stickyMap.backgroundColor);
+					$(sticky).appendTo(area);
+				}
+			})
+		};
+
+		var map = JSON.parse(atob(base64Encoded));
+
+		Object.keys(map).forEach(function(key) {
+			_mapToStickies(map[key], '#' + key);
+		});
+	}
+
+	function closeSticky(sticky) {
+		var text = $(sticky).find('input').val();
+		if(!text || text.length === 0) {
+			$(sticky).find('form').off('submit');
+			$(sticky).find('input').off('click').off('focus');
+			$(sticky).css({display:'none'});
+		}
+		else {
+			//
+		}
+
+		$(sticky).find('input').blur();
+
+		$('#color-box').css({display:'none'}).find('div').off('click');
+
+		serialize();
+
+		selectedSticky = null;
+	}
+
+	function openSticky(sticky) {
+		selectedSticky = $(sticky);
+
+		$('#color-box')
+			.css({
+				left: $(sticky).offset().left + $(sticky).width() - $('#color-box').width(),
+				top: $(sticky).offset().top + $(sticky).height(),
+				display: 'block'
+			})
+			.find('div')
+				.off('click')
+				.removeClass('selected')
+				.click(function(event) {
+					event.stopPropagation();
+
+					$(this).parent().find('.selected').removeClass('selected');
+					$(this).addClass('selected');
+
+					$(sticky).css({backgroundColor:$(this).css('backgroundColor')}).find('input').focus();
+
+					serialize();
+				})
+				.end()
+			.find('div')
+				.each(function() {
+					if($(this).css('backgroundColor') == $(sticky).css('backgroundColor')) {
+						$(this).addClass('selected');
+					}
+				})
+	}
+
+	function createSticky(text, backgroundColor) {
+		var sticky = $('<div class="sticky">\
+			<form><input placeholder="Type..." type="text"/></form>\
+		</div>')
+			.find('form').submit(function(event) {
+				event.preventDefault();
+
+				closeSticky($(this).parent());
+			}).end()
+			.css({background: backgroundColor || $('#color-box div.selected').css('background')});
+
+		$(sticky)
+			.find('input')
+				.val(text || '')
+				.click(function(event) {
+					event.stopPropagation();
+				})
+				.focus(function(event) {
+					setTimeout(function() {
+						openSticky($(sticky));
+					}, 10);
+				});
+
+		return $(sticky);
+	}
+
+	if(window.location.hash && window.location.hash.length > 1) {
+		deserialize(window.location.hash.slice(1));
+	}
+
+	$('div.area').click(function(event) {
+		if($(selectedSticky).length) {
+			closeSticky($(selectedSticky));
+		}
+		else {
+			createSticky().appendTo($(this)).find('input').focus();
+		}
+	});
+
+	$(window).on('beforeunload', function() {
+		return 'You are closing your business model canvas. It is not saved, unless you copied the link. Are you sure you want to close your canvas?';
+	});
+
+	$(document).keyup(function(e) {
+		if(e.keyCode == 27) {
+			if(selectedSticky) {
+				closeSticky($(selectedSticky));
+			}
+		}
+	});
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-52526406-2', 'auto');
+	ga('send', 'pageview');
+	</script>
+</body>
+</html>

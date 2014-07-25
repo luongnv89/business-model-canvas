@@ -1,0 +1,20 @@
+{
+  "name": "business-model-canvas",
+  "version": "0.0.0",
+  "authors": [
+    "martijndeh <martijn@ff00ff.nl>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gss": "~1.0.4-beta",
+    "jquery": "~2.1.1"
+  }
+}

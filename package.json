@@ -1,0 +1,6 @@
+{
+  "name": "business-model-canvas",
+  "dependencies": {
+    "express": "^4.6.1"
+  }
+}
