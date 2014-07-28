@@ -15,3 +15,5 @@ $ node web.js
 Don't have node and/or bower installed? Head over to http://bower.io/#install-bower or http://nodejs.org/.
 
 Enjoy!
+
+The Business Model Canvas methodology is developed by http://www.businessmodelgeneration.com/ and licensed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
